@@ -35,7 +35,7 @@ function Movies() {
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
                 className="card-img-top img-fluid img-responsive"
-                style={{width: "100%", height: "250px"}}
+                style={{width: "100%", height: "400px", objectFit: "container"}}
               />
               <div className="card-body">
                 <h5 className="card-title mt-3 mb-3">{movie.title}</h5>

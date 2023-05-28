@@ -45,7 +45,12 @@ function MovieDetails() {
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
               className="img-fluid img-responsive"
-              style={{width: "100%", height: "450px", borderRadius: "10px"}}
+              style={{
+                width: "100%",
+                height: "450px",
+                objectFit: "container",
+                borderRadius: "10px",
+              }}
             />
           </div>
           <div className="col-sm-12 col-md-12 col-lg-8 mb-3 text-light">
