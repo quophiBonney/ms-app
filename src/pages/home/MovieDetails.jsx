@@ -40,7 +40,7 @@ function MovieDetails() {
       <div className="container-fluid movieDetails mt-5" />
       <div className="container mt-5">
         <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-4 mb-3">
+          <div className="col-sm-12 col-md-12 col-lg-4 mb-3 px-3">
             <img
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
@@ -48,12 +48,11 @@ function MovieDetails() {
               style={{
                 width: "100%",
                 height: "450px",
-                objectFit: "container",
                 borderRadius: "10px",
               }}
             />
           </div>
-          <div className="col-sm-12 col-md-12 col-lg-8 mb-3 text-light">
+          <div className="col-sm-12 col-md-12 col-lg-8 mb-3 text-light px-3">
             <div className="row">
               <div className="col-sm-4">
                 <p>Release Date:{movie.release_date}</p>

@@ -29,13 +29,20 @@ function Movies() {
     <Container>
       <div className="row justify-content-center">
         {movies.map(movie => (
-          <div key={movie.id} className="col-sm-6 col-md-4 col-lg-4 mb-3 mt-3">
+          <div
+            key={movie.id}
+            className="col-sm-6 col-md-4 col-lg-4 mb-3 mt-3 px-3"
+          >
             <div className="text-light">
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.title}
                 className="card-img-top img-fluid img-responsive"
-                style={{width: "100%", height: "400px", objectFit: "container"}}
+                style={{
+                  width: "100%",
+                  height: "400px",
+                  borderRadius: "20px",
+                }}
               />
               <div className="card-body">
                 <h5 className="card-title mt-3 mb-3">{movie.title}</h5>

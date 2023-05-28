@@ -4,7 +4,7 @@ function Advantages() {
   return (
     <Container className="mt-4">
       <Row>
-        <Col sm={12} md={12} lg={12}>
+        <Col sm={12} md={12} lg={12} className="px-3">
           <h2 variant="h3" className="text-light">
             BTube - Database of All Movies and Series
           </h2>
@@ -32,7 +32,7 @@ function Advantages() {
             or zmovies.
           </p>
         </Col>
-        <Col sm={12} md={12} lg={12}>
+        <Col sm={12} md={12} lg={12} className="px-3">
           <h2 variant="h4" className="text-light">
             Watching movies at home - how to prepare well for it?
           </h2>
