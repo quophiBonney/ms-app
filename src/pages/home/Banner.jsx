@@ -15,7 +15,12 @@ function Banner() {
 
   return (
     <Container fluid className="banner ms-auto">
-      <Container className="mt-5">
+      <Container
+        className="mt-5"
+        data-aos="slide-right"
+        data-aos-duration="1000"
+        data-aos-delay="100"
+      >
         <Row className="justify-content-center">
           <Col
             sm={12}
@@ -29,7 +34,7 @@ function Banner() {
             </p>
             <InputGroup className="mb-5">
               <Form.Control
-                placeholder="Search for a moviv, tv show or person....."
+                placeholder="Search for a movie, tv show or person....."
                 aria-label="Search"
                 aria-describedby="basic-addon2"
                 onClick={handleSearchChange}

@@ -9,8 +9,6 @@ function Navigation() {
     return null; // Return nothing to hide the navbar
   } else if (location.pathname === "/auth/signup") {
     return null;
-  } else if (location.pathname === "/home") {
-    return null;
   }
   return (
     <Navbar
@@ -31,8 +29,8 @@ function Navigation() {
           <Nav>
             <div className={NavCSS.btnGroup}>
               <Nav.Link>
-                <Link to="auth/signup" className="btn" id={NavCSS.btnSearch}>
-                  Search
+                <Link to="auth/login" className="btn" id={NavCSS.btnSearch}>
+                  Login
                 </Link>
               </Nav.Link>
               <Nav.Link>

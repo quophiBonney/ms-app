@@ -72,14 +72,14 @@ function MovieDetails() {
               <div className="col-sm-2">
                 <Link
                   to="/"
-                  className="btn btn-light rounded-pill text-decoration-none"
+                  className="btn btn-light rounded-pill text-decoration-none mb-3"
                 >
                   <HiStar /> Rate It
                 </Link>
               </div>
               <div className="col-sm-3">
                 <p
-                  className="btn btn-light rounded-pill text-decoration-none"
+                  className="btn btn-light rounded-pill text-decoration-none mb-3"
                   onClick={openModal}
                 >
                   <HiPlay /> Watch Trailer
@@ -88,7 +88,7 @@ function MovieDetails() {
               <div className="col-sm-3">
                 <Link
                   to="/"
-                  className="btn btn-light rounded-pill text-decoration-none"
+                  className="btn btn-light rounded-pill text-decoration-none mb-3"
                 >
                   <HiCollection /> Add To Favorites
                 </Link>
@@ -103,9 +103,10 @@ function MovieDetails() {
           style={{
             overlay: {
               backgroundColor: "rgba(0, 0, 0, 0.5)",
+              marginTop: "40px",
             },
             content: {
-              maxWidth: "800px",
+              maxWidth: "100%",
               margin: "auto",
               padding: "20px",
             },
