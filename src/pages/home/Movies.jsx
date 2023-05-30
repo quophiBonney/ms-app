@@ -53,7 +53,7 @@ const Movies = forwardRef((props, ref) => {
           {searchResults.map(movie => (
             <div
               key={movie.id}
-              className="col-sm-6 col-md-4 col-lg-4 mb-3 mt-3 px-3"
+              className="col-sm-6 col-md-4 col-lg-4 mb-3 mt-2 px-3"
               data-aos="slide-up"
               data-aos-duration="1000"
               data-aos-delay="100"
