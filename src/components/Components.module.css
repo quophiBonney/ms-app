@@ -4,13 +4,10 @@
     box-sizing: border-box;
     margin: 0;
 }
-body {
-  background: #000;
-  height: 100vh;
-}
 #navbar {
     background: #0e0808cf;
     color: #fff;
+    height: auto;
 }
 #navLogo {
     height: 6em;
@@ -25,7 +22,7 @@ body {
     font-size: 35px;
 }
 .btnGroup {
-    display: flex;
+    display: inline-flex;
 }
 #btnSearch {
     background: transparent;

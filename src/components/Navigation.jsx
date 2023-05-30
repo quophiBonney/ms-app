@@ -19,7 +19,7 @@ function Navigation() {
     >
       <Container>
         <Navbar.Brand href="#home">
-          <h4>Hi</h4>
+          <h4 className="text-light text-uppercase">BTube</h4>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
           <HiMenuAlt3 className={NavCSS.toggleIcon} />

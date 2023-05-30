@@ -26,7 +26,7 @@ function Movies() {
   };
 
   return (
-    <Container>
+    <Container style={{backgroundColor: "#000"}}>
       <div className="row justify-content-center">
         {movies.map(movie => (
           <div

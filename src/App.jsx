@@ -6,7 +6,6 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/home/Home";
 import MovieDetails from "./pages/home/MovieDetails";
 import Movies from "./pages/home/Movies";
-import Footer from "./components/Footer";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import AOS from "aos";
@@ -23,7 +22,6 @@ function App() {
         <Route path="/auth/signup" element={<Signup />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
