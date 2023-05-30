@@ -3,6 +3,7 @@ import {useLocation, Link} from "react-router-dom";
 import NavCSS from "./Components.module.css";
 import {Container, Nav, Navbar} from "react-bootstrap";
 import {HiMenuAlt3, HiUser} from "react-icons/hi";
+import {MdLogin} from "react-icons/md";
 function Navigation() {
   const location = useLocation();
   if (location.pathname === "/auth/login") {
@@ -30,12 +31,12 @@ function Navigation() {
             <div className={NavCSS.btnGroup}>
               <Nav.Link>
                 <Link to="auth/login" className="btn" id={NavCSS.btnSearch}>
-                  Login
+                  <MdLogin /> Login
                 </Link>
               </Nav.Link>
               <Nav.Link>
                 <Link to="auth/signup" className="btn" id={NavCSS.registerBtn}>
-                  <HiUser /> Your Account
+                  <HiUser /> Register
                 </Link>
               </Nav.Link>
             </div>

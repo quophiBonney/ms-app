@@ -38,92 +38,94 @@ function MovieDetails() {
   return (
     <div>
       <div className="container-fluid movieDetails mt-5" />
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-4 mb-3 px-3">
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt={movie.title}
-              className="img-fluid img-responsive"
-              style={{
-                width: "100%",
-                height: "450px",
-                borderRadius: "10px",
-              }}
-            />
-          </div>
-          <div className="col-sm-12 col-md-12 col-lg-8 mb-3 text-light px-3">
-            <div className="row">
-              <div className="col-sm-4">
-                <p>Release Date:{movie.release_date}</p>
+      <div className="container-fluid" style={{backgroundColor: "#000"}}>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-4 mt-5  mb-3 px-3">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.title}
+                className="img-fluid img-responsive"
+                style={{
+                  width: "100%",
+                  height: "450px",
+                  borderRadius: "10px",
+                }}
+              />
+            </div>
+            <div className="col-sm-12 col-md-12 col-lg-8  mt-5 mb-3 text-light px-3">
+              <div className="row">
+                <div className="col-sm-4">
+                  <p>Release Date:{movie.release_date}</p>
+                </div>
+                <div className="col-sm-4">
+                  <p className="">Original Title({movie.original_title})</p>
+                </div>
+                <div className="col-sm-4">
+                  <p className="ms-auto">Language({movie.original_language})</p>
+                </div>
               </div>
-              <div className="col-sm-4">
-                <p className="">Original Title({movie.original_title})</p>
-              </div>
-              <div className="col-sm-4">
-                <p className="ms-auto">Language({movie.original_language})</p>
+              <h2 style={{fontFamily: "Archivo Black, sans-serif"}}>
+                {movie.title}
+              </h2>
+              <p>{movie.overview}</p>
+              <div className="row">
+                <div className="col-sm-2">
+                  <Link
+                    to="/"
+                    className="btn btn-light rounded-pill text-decoration-none mb-3"
+                  >
+                    <HiStar /> Rate It
+                  </Link>
+                </div>
+                <div className="col-sm-3">
+                  <p
+                    className="btn btn-light rounded-pill text-decoration-none mb-3"
+                    onClick={openModal}
+                  >
+                    <HiPlay /> Watch Trailer
+                  </p>
+                </div>
+                <div className="col-sm-3">
+                  <Link
+                    to="/"
+                    className="btn btn-light rounded-pill text-decoration-none mb-3"
+                  >
+                    <HiCollection /> Add To Favorites
+                  </Link>
+                </div>
               </div>
             </div>
-            <h2 style={{fontFamily: "Archivo Black, sans-serif"}}>
-              {movie.title}
-            </h2>
-            <p>{movie.overview}</p>
-            <div className="row">
-              <div className="col-sm-2">
-                <Link
-                  to="/"
-                  className="btn btn-light rounded-pill text-decoration-none mb-3"
-                >
-                  <HiStar /> Rate It
-                </Link>
-              </div>
-              <div className="col-sm-3">
-                <p
-                  className="btn btn-light rounded-pill text-decoration-none mb-3"
-                  onClick={openModal}
-                >
-                  <HiPlay /> Watch Trailer
-                </p>
-              </div>
-              <div className="col-sm-3">
-                <Link
-                  to="/"
-                  className="btn btn-light rounded-pill text-decoration-none mb-3"
-                >
-                  <HiCollection /> Add To Favorites
-                </Link>
-              </div>
-            </div>
           </div>
+          <Modal
+            isOpen={showModal}
+            onRequestClose={closeModal}
+            contentLabel="Trailer Modal"
+            style={{
+              overlay: {
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                marginTop: "30px",
+              },
+              content: {
+                maxWidth: "100%",
+                margin: "auto",
+                padding: "20px",
+              },
+            }}
+          >
+            <iframe
+              width="100%"
+              height="400"
+              src={`https://www.youtube.com/movie/${id}`}
+              frameBorder="0"
+              allowFullScreen
+              title="Movie Trailer"
+            ></iframe>
+            <button className="btn btn-danger" onClick={closeModal}>
+              Close
+            </button>
+          </Modal>
         </div>
-        <Modal
-          isOpen={showModal}
-          onRequestClose={closeModal}
-          contentLabel="Trailer Modal"
-          style={{
-            overlay: {
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
-              marginTop: "40px",
-            },
-            content: {
-              maxWidth: "100%",
-              margin: "auto",
-              padding: "20px",
-            },
-          }}
-        >
-          <iframe
-            width="100%"
-            height="400"
-            src={`https://www.youtube.com/movie/${id}`}
-            frameBorder="0"
-            allowFullScreen
-            title="Movie Trailer"
-          ></iframe>
-          <button className="btn btn-danger" onClick={closeModal}>
-            Close
-          </button>
-        </Modal>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Container, Row, Col, Form, InputGroup} from "react-bootstrap";
-
-function Banner() {
+function Banner({handleSearch}) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = event => {
@@ -9,8 +8,7 @@ function Banner() {
   };
 
   const handleSearchClick = () => {
-    // Perform search logic here
-    console.log("Search term:", searchTerm);
+    handleSearch(searchTerm);
   };
 
   return (
@@ -37,7 +35,7 @@ function Banner() {
                 placeholder="Search for a movie, tv show or person....."
                 aria-label="Search"
                 aria-describedby="basic-addon2"
-                onClick={handleSearchChange}
+                onChange={handleSearchChange}
               />
               <button className="btn btn-dark py-2" onClick={handleSearchClick}>
                 Search
